@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> 北京央化企业管理有限公司 &amp;加油站 |能源</title>
+  <!--Favicon-->
+  <link rel="icon" href="assets/img/faq.png" type="image/jpg" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <!-- Font Awesome CSS-->
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Line Awesome CSS -->
+  <link href="assets/css/line-awesome.min.css" rel="stylesheet">
+  <!-- Animate CSS-->
+  <link href="assets/css/animate.css" rel="stylesheet">
+  <!-- Bar Filler CSS -->
+  <link href="assets/css/barfiller.css" rel="stylesheet">
+  <!-- Flaticon CSS -->
+  <link href="assets/css/flaticon.css" rel="stylesheet">
+  <!-- Owl Carousel CSS -->
+  <link href="assets/css/owl.carousel.css" rel="stylesheet">
+  <!-- Style CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Responsive CSS -->
+  <link href="assets/css/responsive.css" rel="stylesheet">
+  <link href="assets/css/fycj.css" rel="stylesheet">
+  <!-- jquery -->
+  <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+  <script src="./assets/js/fycj.js"></script>
+  <style>
+    .fullmeasureOuterContent {
+      width: 100%;
+      height: 100px;
+      border-bottom: 1px solid wheat;
+    }
+
+    .fullmeasureOuterContent:visited {
+      background-color: black;
+    }
+
+    .fullUl {
+      height: 100%;
+      text-align: center;
+      line-height: 100px;
+      background-color: rgb(0 163 62);
+      color: aliceblue;
+    }
+
+    .section-padding {
+      padding: 10px 10px 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Area -->
+  <header class="header-area">
+    <div class="sticky-area">
+      <div class="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="logo">
+                <a class="navbar-brand" href="index.html" style="margin-top: 10px"><img src="./assets/img/logo.png"
+                    alt="" /></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-title">
+                <p>北京央化企业管理有限公司</p>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="main-menu">
+                <nav class="navbar navbar-expand-lg">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页 <span class="sub-nav-toggler"> </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于央化</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="development-plan.html">发展规划 <span class="sub-nav-toggler"> </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="company-culture.html">企业文化 <span class="sub-nav-toggler"> </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link actived" href="news.html">新闻中心 <span class="sub-nav-toggler"> </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="training.html">培训 <span class="sub-nav-toggler"> </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="services.html">招商加盟 <span class="sub-nav-toggler"> </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">联系我们</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Breadcroumb Area -->
+  <div class="breadcroumb-area bread-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="breadcroumb-title">
+            <h1>新闻中心</h1>
+            <h6><a href="index.html">首页</a> / 新闻中心 </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Choose Us Section -->
+  <div class="chooseus-area section-padding">
+    <div class="container">
+      <div class="row" style="height:30px;">
+        <h3 style="margin: 0 auto;color:#70C150;">新闻中心/NEWS </h3>
+      </div>
+      <div class="row" id="wide">
+        <div class="col-lg-2 col-md-6 col-sm-12">
+          <ul class="fullUl" id="but">
+            <li id="oldsong" class="fullmeasureOuterContent"><span>普通新闻</span></li>
+            <li id="publicsong" class="fullmeasureOuterContent"><span>培训新闻</span></li>
+          </ul>
+        </div>
+        <div class="oldsong col-lg-10 col-md-6 col-sm-12 " id="old">
+          <div class="blog-area gray-bg section-padding">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 col-12">
+                </div>
+                <div class="col-lg-6 text-right"></div>
+              </div>
+              <div class="row" >
+                <div class="col-lg-6 col-md-12 col-sm-12"  v-for="item in newData">
+                  <div class="single-blog-item wow fadeInLeft" data-wow-delay=".6s">
+                    <div class="blog-bg">
+                      <img :src="item.newsCover" alt="" />
+                    </div>
+                    <div class="blog-content">
+                      <p class="blog-meta">
+                        <!-- <i class="las la-user-circle"></i>普通 <i class="las la-calendar-check"></i> -->
+                        <i class="las la-calendar-check"></i>
+                        {{item.createTime}}
+                      </p>
+                      <h5>
+                        <a :href="item.newsLink" target="_blank">{{item.newsName}}</a>
+                      </h5>
+                      <!-- <p>燃料服务的五个重要解决方案</p> -->
+                      <!-- <a :href="item.newsLink" target="_blank" class="read-more">Read More</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" v-if="newData.length===0" style="justify-content: center;margin-top: 20px;min-height: 400px;
+              line-height: 400px;">暂无数据</div>
+                <div v-if="newData.length>0" class="page"></div>
+            </div>
+          </div>
+        </div>
+        <div class="publicsong col-lg-10 col-md-6 col-sm-12 " id="public">
+          <div class="blog-area gray-bg section-padding">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 col-12">
+                </div>
+                <div class="col-lg-6 text-right"></div>
+              </div>
+              <div class="row" >
+                <div class="col-lg-6 col-md-6 col-sm-12" v-for="item in newData">
+                  <div class="single-blog-item wow fadeInLeft" data-wow-delay=".6s">
+                    <div class="blog-bg">
+                      <img :src="item.newsCover" alt="" />
+                    </div>
+                    <div class="blog-content">
+                      <p class="blog-meta">
+                        <!-- <i class="las la-user-circle"></i>培训 -->
+                         <i class="las la-calendar-check"></i>
+                        {{item.createTime}}
+                      </p>
+                      <h5>
+                        <a :href="item.newsLink" target="_blank">{{item.newsName}}</a>
+                      </h5>
+                      <!-- <a :href="item.newsLink" target="_blank" class="read-more">Read More</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" v-if="newData.length===0" style="justify-content: center;margin-top: 20px;min-height: 400px;
+            line-height: 400px;">暂无数据</div>
+            <div class="page1"  v-if="newData.length>0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Footer Area -->
+    <footer class="footer-area wow fadeIn" data-wow-delay=".2s">
+      <div class="container">
+        <div class="footer-up">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="logo">
+                <img src="http://20727286.s21i.faiusr.com/4/ABUIABAEGAAgz-CS7gUojeKvuQIwsAk4sAk!100x100.png.webp"
+                  alt="fossil-logo" />
+              </div>
+              <p> 我们是客户满意度最高的加油站。 我们在全国各地提供服务， 我们从不放弃挑战。</p>
+            </div>
+            <div class="col-lg-2 offset-lg-1 col-md-6 com-sm-12">
+              <h5>主要模块</h5>
+              <ul>
+                <li>
+                  <a href="about.html">关于公司</a>
+                  <a href="development-plan.html">发展规划</a>
+                  <a href="company-culture.html">企业文化</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12">
+              <h5>关于我们</h5>
+              <ul>
+                <li>
+                  <a href="news.html"><span>-</span> 新闻中心</a>
+                  <a href="training.html"><span>-</span> 培 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;训</a>
+                  <a href="services.html"><span>-</span> 招商加盟</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="subscribe-form">
+                <h5>联系我们</h5>
+                <p>电话：13385344413/18515333678 </p>
+                <p>地址：北京市通州区新华南路64号1层1037</p>
+                <p>邮箱： zhongguoyanghua@126.com </p>
+                <p>时间：周一至周五( 9:00--18:00 )</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+     <div class="footer-bottom">
+       <div class="container">
+         <div class="row justify-content-center align-items-center">
+           <div class="col-lg-6 col-md-6 col-sm-12">
+             <p class="copyright-line" style="color: azure;">Copyright 2022 ©央化能源 All Rights Reserved.</p>
+           </div>
+           <div class="col-lg-6 col-md-6 col-sm-12">
+             <p class="privacy"><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"
+                 style="color: azure;"> <img src="./assets/img/foot_line.gif" alt="" style="width: 18px;">
+                 京ICP备20020134号-1</a> </p>
+           </div>
+         </div>
+       </div>
+     </div>
+    <!-- Scroll Top Area -->
+    <a href="#top" class="go-top"><i class="las la-angle-up"></i></a>
+    <!-- Popper JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Wow JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Way Points JS -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Counter Up JS -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- Sticky JS -->
+    <script src="assets/js/jquery.sticky.js"></script>
+    <!-- Progress Bar JS -->
+    <script src="assets/js/jquery.barfiller.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+    </script>
+    <script>
+      $().ready(function () {
+        //统一编码，便于维护
+        // 为第一个设置默认显示
+        $("#but li:first").css("background", "#6c757d");
+        $("#wide #public").css("display", "none"); //隐藏下标大于1的标签，从0开始
+        $("#oldsong").click( // 点击经典老歌按钮
+          function () {
+            $(this).css("background", "#6c757d");
+            $('#publicsong').css("background", "rgb(0 163 62)");
+            $("#old").css("display", "block");
+            $("#public").css("display", "none");
+          });
+        $("#publicsong").click( // 点击流行歌曲按钮
+          function () {
+            $(this).css("background", "#6c757d");
+            $('#oldsong').css("background", "rgb(0 163 62)");
+            $("#public").css("display", "block");
+            $("#old").css("display", "none");
+          });
+      });
+    </script>
+    <script>
+      // 实例化vue对象
+      const old = new Vue({
+        el: "#old",
+        data: {
+          newData: "",
+          totalPage: "",
+          currPage: 1,
+          pageSize: 4
+        },
+        created() {},
+        async mounted() {
+          await this.getNew();
+          //有数据渲染分页
+          if(this.totalPage>0){
+            $('.page').create({
+              pageCount: this.totalPage, //总页数
+              current: this.currPage, //当前页码
+              backFn: function (p, fn) {
+                fn(p)
+              } //回调函数
+            }, this.getNew)
+          }
+        },
+        methods: {
+          async getNew(currPage) {
+            console.log(currPage, "p")
+            // return new Promise((resolve, reject) => {
+              await axios.get('https://yzb.zhongguoyanghua.com/yzb//wx/gw/list', {
+                params: {
+                  newsType: 0,
+                  limit: this.pageSize,
+                  page: currPage ? currPage : this.currPage
+                }
+              }).then((res) => {
+                this.newData = res.data.page.list;
+                this.totalPage = res.data.page.totalPage;
+                console.log(this.newData, 2);
+              }).catch(function (error) {
+                console.log(error)
+              })
+            // })
+          },
+        },
+      })
+      new Vue({
+        el: "#public",
+        data: {
+          newData: "",
+          totalPage: "",
+          currPage: 1,
+          pageSize: 4
+        },
+        created() {},
+        async mounted() {
+          await this.getNew();
+          console.log(this.totalPage,"this.totalPage");
+          if(this.totalPage>0){
+            $('.page1').create({
+              pageCount: this.totalPage, //总页数
+              current: this.currPage, //当前页码
+              backFn: function (p, fn) {
+                fn(p)
+              } //回调函数
+            }, this.getNew)
+          }
+        },
+        methods: {
+          async getNew(currPage) {
+            await axios.get('https://yzb.zhongguoyanghua.com/yzb//wx/gw/list', {
+              params: {
+                newsType: 1,
+                page: currPage ? currPage : this.currPage,
+                limit: this.pageSize
+              }
+            }).then((res) => {
+              this.newData = res.data.page.list;
+              this.totalPage = res.data.page.totalPage;
+              console.log(this.newData);
+            }).catch(function (error) {
+              console.log(error)
+            })
+            // })
+          }
+        },
+      })
+    </script>
+</body>
+
+</html>
