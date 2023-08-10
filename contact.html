@@ -1,0 +1,405 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title> 北京央化企业管理有限公司 &amp;加油站 |能源</title>
+ 	<!--Favicon-->
+ 	<link rel="icon" href="assets/img/faq.png" type="image/jpg" />
+ 	<!-- Bootstrap CSS -->
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+ 	<!-- Font Awesome CSS-->
+ 	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+ 	<!-- Line Awesome CSS -->
+ 	<link href="assets/css/line-awesome.min.css" rel="stylesheet">
+ 	<!-- Animate CSS-->
+ 	<link href="assets/css/animate.css" rel="stylesheet">
+ 	<!-- Bar Filler CSS -->
+ 	<link href="assets/css/barfiller.css" rel="stylesheet">
+ 	<!-- Flaticon CSS -->
+ 	<link href="assets/css/flaticon.css" rel="stylesheet">
+ 	<!-- Owl Carousel CSS -->
+ 	<link href="assets/css/owl.carousel.css" rel="stylesheet">
+ 	<!-- Style CSS -->
+ 	<link href="assets/css/style.css" rel="stylesheet">
+ 	<!-- Responsive CSS -->
+ 	<link href="assets/css/responsive.css" rel="stylesheet">
+ 	<link href="assets/date/skin/jedate.css" rel="stylesheet">
+
+ 	<!-- jquery -->
+ 	<script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+ 	<script src="./assets/date/jquery.jedate.js"></script>
+ 	<script src="./assets/date/test/jedate-test.js"></script>
+ 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+ 	<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+
+ 	<style>
+ 		/* 控制编辑区域的 */
+ 		/* input[type="datetime-local"]::-webkit-datetime-edit {
+ 			color: rgb(69, 26, 150);
+ 			padding-left: 10px;
+ 		} */
+
+ 		/* 控制年月日这个区域的 */
+ 		/* input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+ 			background-color: #fff;
+ 		} */
+
+ 		/* 这是控制年月日之间的斜线或短横线的 */
+ 		/* input[type="datetime-local"]::-webkit-datetime-edit-text {
+ 			color: blue;
+ 			padding: 0 .3em;
+ 		} */
+
+ 		/* 控制年字 */
+ 		/* input[type="datetime-local"]::-webkit-datetime-edit-year-field {
+            color: purple;
+          } */
+ 		/* 控制月字 */
+ 		/* input[type="datetime-local"]::-webkit-datetime-edit-month-field {
+            color: red;
+          } */
+ 		/* 控制日字 */
+ 		/* input[type="datetime-local"]::-webkit-datetime-edit-day-field  {
+            color: pink;
+          } */
+ 		/*控制下拉小箭头的*/
+ 		input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+ 			display: inline-block;
+ 			width: 15px;
+ 			height: 15px;
+ 			position: absolute;
+ 			/* top: 12px; */
+ 			right: 0px;
+ 			border: 1px solid #fff;
+ 			border-radius: 2px;
+ 			box-shadow: inset 0 1px #fff, 0 1px #eee;
+ 			background-color: #fff;
+ 			/* background:url('./') -188px -99px; */
+ 			/* background-image: -webkit-linear-gradient(top, #c91f1f, #2abd3e); */
+ 			color: rgb(138, 33, 65);
+ 		}
+
+ 		/* 去掉date中上下小三角，但是保留input类型为number的小三角。 */
+ 		input[type=datetime-local]::-webkit-inner-spin-button {
+ 			visibility: hidden;
+ 		}
+
+ 		/*----------用来移除叉叉按钮 鼠标移上去还会显示----------*/
+ 		input[type="datetime-local"]::-webkit-clear-button {
+ 			display: none;
+ 		}
+
+ 		#startTime {
+ 			position: relative;
+ 		}
+
+ 		/* #startTime::-webkit-calendar-picker-indicator {
+ 			position: absolute;
+ 			right: 0;
+ 			padding-left: calc(100% - 40px);
+ 		} */
+ 	</style>
+ </head>
+
+ <body>
+ 	<!-- Header Area -->
+ 	<header class="header-area">
+ 		<div class="sticky-area">
+ 			<div class="navigation">
+ 				<div class="container">
+ 					<div class="row">
+ 						<div class="col-lg-2">
+ 							<div class="logo">
+ 								<a class="navbar-brand" href="index.html" style="margin-top: 10px"><img src="./assets/img/logo.png"
+ 										alt="" /></a>
+ 							</div>
+ 						</div>
+ 						<div class="col-lg-3">
+ 							<div class="sub-title">
+ 								<p>北京央化企业管理有限公司</p>
+ 							</div>
+ 						</div>
+ 						<div class="col-lg-7">
+ 							<div class="main-menu">
+ 								<nav class="navbar navbar-expand-lg">
+ 									<button class="navbar-toggler" type="button" data-toggle="collapse"
+ 										data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+ 										aria-label="Toggle navigation">
+ 										<span class="navbar-toggler-icon"></span>
+ 										<span class="navbar-toggler-icon"></span>
+ 										<span class="navbar-toggler-icon"></span>
+ 									</button>
+ 									<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+ 										<ul class="navbar-nav ml-auto">
+ 											<li class="nav-item">
+ 												<a class="nav-link " href="index.html">首页 <span class="sub-nav-toggler"> </span>
+ 												</a>
+ 											</li>
+ 											<li class="nav-item">
+ 												<a class="nav-link" href="about.html">关于央化</a>
+ 											</li>
+ 											<li class="nav-item">
+ 												<a class="nav-link" href="development-plan.html">发展规划 <span class="sub-nav-toggler"> </span>
+ 												</a>
+ 											</li>
+ 											<li class="nav-item">
+ 												<a class="nav-link" href="company-culture.html">企业文化 <span class="sub-nav-toggler"> </span>
+ 												</a>
+ 											</li>
+ 											<li class="nav-item">
+ 												<a class="nav-link" href="news.html">新闻中心 <span class="sub-nav-toggler"> </span>
+ 												</a>
+ 											</li>
+ 											<li class="nav-item">
+ 												<a class="nav-link" href="training.html">培训 <span class="sub-nav-toggler"> </span>
+ 												</a>
+ 											</li>
+ 											<li class="nav-item">
+ 												<a class="nav-link" href="services.html">招商加盟 <span class="sub-nav-toggler"> </span>
+ 												</a>
+ 											</li>
+ 											<li class="nav-item">
+ 												<a class="nav-link actived" href="contact.html">联系我们</a>
+ 											</li>
+ 										</ul>
+ 									</div>
+ 								</nav>
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</header>
+ 	<!-- Breadcroumb Area -->
+ 	<div class="breadcroumb-area bread-bg">
+ 		<div class="container">
+ 			<div class="row">
+ 				<div class="col-lg-12">
+ 					<div class="breadcroumb-title">
+ 						<h1>联系我们</h1>
+ 						<h6><a href="index.html">首页</a> / 联系我们</h6>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<!-- Contact Area -->
+ 	<div id="contact-us" class="contact-us-area section-padding">
+ 		<div class="container">
+ 			<div class="contact-us-wrapper">
+ 				<div class="row no-gutters">
+ 					<div class="col-lg-3 col-md-6 col-12">
+ 						<div class="contact-us-inner">
+ 							<div class="info-i"><span><i class="las la-map-marker"></i></span></div>
+ 							<h5>地址</h5>
+ 							<p>北京市通州区新华南路64号1层1037</p>
+ 						</div>
+ 					</div>
+ 					<div class="col-lg-3 col-md-6 col-12">
+ 						<div class="contact-us-inner">
+ 							<div class="info-i"><span><i class="las la-clock"></i></span></div>
+ 							<h5>工作时间</h5>
+ 							<p>周一至周五 <br>08.00-20.00</p>
+ 						</div>
+ 					</div>
+ 					<div class="col-lg-3 col-md-6 col-12">
+ 						<div class="contact-us-inner">
+ 							<div class="info-i"><span><i class="las la-mobile"></i></span></div>
+ 							<h5>手机号码</h5>
+ 							<p>13385344413 <br>18515333678</p>
+ 						</div>
+ 					</div>
+ 					<div class="col-lg-3 col-md-6 col-12">
+ 						<div class="contact-us-inner">
+ 							<div class="info-i"><span><i class="las la-envelope"></i></span></div>
+ 							<h5>E-mail</h5>
+ 							<p>zhongguoyanghua@126.com</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<!-- Contact Form -->
+ 	<div id="contact-page" class="contact-section blue-bg section-padding">
+ 		<div class="overlay-2"></div>
+ 		<div class="container">
+ 			<div class="row">
+ 				<div class="col-lg-12 col-md-12 col-12 text-center wow fadeInRight">
+ 					<div class="contact-form-wrapper">
+ 						<div class="section-title">
+ 							<h2>联系我们</h2>
+ 						</div>
+ 						<div class="contact-form">
+ 							<div id="app" class="row">
+ 								<div class="col-lg-6 col-md-6 col-12">
+ 									<input type="text" v-model="name" placeholder="姓名" required style="color: beige;" required>
+ 								</div>
+ 								<div class="col-lg-6 col-md-6 col-12 jeitem">
+                <div class="jeinpbox" ><input type="text" class="jeinput" name="datetime" id="test04" placeholder="请输入预约时间" @click="aggTimes" v-model="aggTime"  style="color: beige;"></div>
+            </div>
+ 								<div class="col-lg-6 col-md-6 col-12">
+ 									<input type="tel" v-model="phone" placeholder="手机号码" required style="color: beige;" required>
+ 								</div>
+ 								<div class="col-lg-6 col-md-6 col-12">
+ 									<input type="text" v-model="address" placeholder="地址" required style="color: beige;">
+ 								</div>
+ 								<div class="col-lg-12">
+ 									<textarea v-model="note" cols="30" rows="10" placeholder="请输入您的需求，以便我们尽快联系您" style="color: beige;"></textarea>
+ 								</div>
+ 								<div class="col-lg-12 col-md-6 col-12 text-center">
+ 									<button class="main-btn" @click="submit()">提交</button>
+ 								</div>
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<!-- Footer Area -->
+ 	<footer class="footer-area wow fadeIn" data-wow-delay=".2s">
+ 		<div class="container">
+ 			<div class="footer-up">
+ 				<div class="row">
+ 					<div class="col-lg-3 col-md-6 col-sm-12">
+ 						<div class="logo">
+ 							<img src="http://20727286.s21i.faiusr.com/4/ABUIABAEGAAgz-CS7gUojeKvuQIwsAk4sAk!100x100.png.webp"
+ 								alt="fossil-logo" />
+ 						</div>
+ 						<p> 我们是客户满意度最高的加油站。 我们在全国各地提供服务， 我们从不放弃挑战。</p>
+ 					</div>
+ 					<div class="col-lg-2 offset-lg-1 col-md-6 com-sm-12">
+ 						<h5>主要模块</h5>
+ 						<ul>
+ 							<li>
+ 								<a href="about.html">关于公司</a>
+ 								<a href="development-plan.html">发展规划</a>
+ 								<a href="company-culture.html">企业文化</a>
+ 							</li>
+ 						</ul>
+ 					</div>
+ 					<div class="col-lg-2 col-md-6 col-sm-12">
+ 						<h5>关于我们</h5>
+ 						<ul>
+ 							<li>
+ 								<a href="news.html"><span>-</span> 新闻中心</a>
+ 								<a href="training.html"><span>-</span> 培 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;训</a>
+ 								<a href="services.html"><span>-</span> 招商加盟</a>
+ 							</li>
+ 						</ul>
+ 					</div>
+ 					<div class="col-lg-4 col-md-6">
+ 						<div class="subscribe-form">
+ 							<h5>联系我们</h5>
+ 							<p>电话：13385344413/18515333678 </p>
+ 							<p>地址：北京市通州区新华南路64号1层1037</p>
+ 							<p>邮箱： zhongguoyanghua@126.com </p>
+ 							<p>时间：周一至周五( 9:00--18:00 )</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</footer>
+ 	<div class="footer-bottom">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<p class="copyright-line" style="color: azure;">Copyright 2022 ©央化能源 All Rights Reserved.</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<p class="privacy"><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"
+							style="color: azure;"> <img src="./assets/img/foot_line.gif" alt="" style="width: 18px;">
+							京ICP备20020134号-1</a> </p>
+				</div>
+			</div>
+		</div>
+	</div>
+ 	<!-- Scroll Top Area -->
+ 	<a href="#top" class="go-top"><i class="las la-angle-up"></i></a>
+ 	<!-- Popper JS -->
+ 	<script src="assets/js/popper.min.js"></script>
+ 	<!-- Bootstrap JS -->
+ 	<script src="assets/js/bootstrap.min.js"></script>
+ 	<!-- Wow JS -->
+ 	<script src="assets/js/wow.min.js"></script>
+ 	<!-- Way Points JS -->
+ 	<script src="assets/js/jquery.waypoints.min.js"></script>
+ 	<!-- Counter Up JS -->
+ 	<script src="assets/js/jquery.counterup.min.js"></script>
+ 	<!-- Owl Carousel JS -->
+ 	<script src="assets/js/owl.carousel.min.js"></script>
+ 	<!-- Magnific Popup JS -->
+ 	<script src="assets/js/magnific-popup.min.js"></script>
+ 	<!-- Sticky JS -->
+ 	<script src="assets/js/jquery.sticky.js"></script>
+ 	<!-- Progress Bar JS -->
+ 	<script src="assets/js/jquery.barfiller.js"></script>
+ 	<!-- Main JS -->
+ 	<script src="assets/js/main.js"></script>
+ 	<script src="assets/js/moment.js"></script>
+ 	<script>
+ 		// 实例化vue对象
+ 		new Vue({
+ 			el: "#app",
+ 			data: {
+ 				name: "",
+ 				aggTime: '',
+ 				address: '',
+ 				phone: '',
+ 				note: ''
+ 			},
+ 			created() {},
+ 			mounted() {
+				document.querySelector('[name="datetime"]').focus();
+				document.querySelector('[name="datetime"]').click();
+				document.querySelector('[name="datetime"]').value= moment().startOf('day').format('YYYY-MM-DD HH:mm:ss');
+				document.querySelector('[name="datetime"]').blur();
+
+			 },
+ 			methods: {
+ 				submit() {
+ 					const params = new URLSearchParams();
+ 					params.append('name', this.name);
+ 					params.append('aggTime', this.aggTime);
+ 					params.append('phone', this.phone);
+ 					params.append('address', this.address);
+					 console.log(params,"this.aggTime");
+
+ 					// return new Promise((resolve, reject) => {
+ 					axios.post('https://yzb.zhongguoyanghua.com/yzb//wx/gw/save', params).then((res) => {
+ 						console.log(res.data.code, "res.data.code");
+ 						if (res.data.code === 0) {
+ 							alert("提交成功");
+ 							window.location.reload();
+ 						} else if (res.data.code === 500) {
+ 							alert(res.data.msg);
+ 						}
+ 						console.log(res, "submit");
+ 					}).catch(function (error) {
+ 						console.log(error)
+ 					})
+ 					// })
+ 				},
+				 aggTimes(e){
+					e.target.blur();
+					e.target.focus();
+					e.target.blur();
+					e.target.focus();
+					e.target.value=e.target.value;
+					var inputEl = document.querySelector('[name="datetime"]');
+					 console.log(e.target.value,"e");
+					 this.aggTime=inputEl.value;
+					console.log(inputEl.value,"ddd");
+				 }
+ 			},
+ 		})
+ 	</script>
+ </body>
+
+ </html>
